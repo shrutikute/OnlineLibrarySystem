@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>OnlineLibrarySystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  	
+  <resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/librarydb</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+  
+  
+ 
+  	<servlet-mapping>
+		<servlet-name>LoginOperationsServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>LoginOperationsServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.LoginOperationsServlet</servlet-class>
+	</servlet>
+	
+	
+    <servlet-mapping>
+		<servlet-name>SignUpOperationsServlet</servlet-name>
+		<url-pattern>/signUp</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SignUpOperationsServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.SignUpOperationsServlet</servlet-class>
+	</servlet>
+
+	
+	 <servlet-mapping>
+		<servlet-name>IssueOperationsServlet</servlet-name>
+		<url-pattern>/issueBook</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>IssueOperationsServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.IssueOperationsServlet</servlet-class>
+	</servlet>
+	
+	
+	 <servlet-mapping>
+		<servlet-name>ProcessBookIssueFormServlet</servlet-name>
+		<url-pattern>/bookIssued</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>ProcessBookIssueFormServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.ProcessBookIssueFormServlet</servlet-class>
+	</servlet>
+	
+	
+	 <servlet-mapping>
+		<servlet-name>ReturnOperationsServlet</servlet-name>
+		<url-pattern>/returnBook</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>ReturnOperationsServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.ReturnOperationsServlet</servlet-class>
+	</servlet>
+	
+	 <servlet-mapping>
+		<servlet-name>ProcessBookReturnFormServlet</servlet-name>
+		<url-pattern>/bookReturned</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>ProcessBookReturnFormServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.ProcessBookReturnFormServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BookMemberOperationsServlet</servlet-name>
+		<url-pattern>/bookmembers</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>BookMemberOperationsServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.BookMemberOperationsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ProcessListMemberFormServlet</servlet-name>
+		<url-pattern>/listMembers</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>ProcessListMemberFormServlet</servlet-name>
+		<servlet-class>com.npu11629.libraryapp.servlets.ProcessListMemberFormServlet</servlet-class>
+	</servlet>
+	
+	
+	
+  <!-- 
+	
+	<servlet>
+		<servlet-name>IssueServlet</servlet-name>
+		<servlet-class>com.npu.lab5.servlets.IssueServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ListBooksServlet</servlet-name>
+		<servlet-class>com.npu.lab5.servlets.ListBooksServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>IssueServlet</servlet-name>
+		<url-pattern>/servlet/issue</url-pattern>
+	</servlet-mapping>
+	
+
+	
+	<servlet-mapping>
+		<servlet-name>ListBooksServlet</servlet-name>
+		<url-pattern>/listBooks.html</url-pattern>
+	</servlet-mapping> -->
+
+  
+</web-app>

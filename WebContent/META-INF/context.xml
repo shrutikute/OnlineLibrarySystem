@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Loader delegate="true"/>
+<Resource
+        name="jdbc/librarydb"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxActive="20"
+        maxIdle="5"
+        username="library_user"
+        maxWait="1"
+        driverClassName="com.mysql.jdbc.Driver"
+        password="library"
+        url="jdbc:mysql://localhost/cs532_online_library"/>
+</Context>
